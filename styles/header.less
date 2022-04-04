@@ -1,0 +1,48 @@
+.header {
+  background-color: var(--black-bkg);
+
+  min-height: 75px;
+
+  display: flex;
+  align-items: center;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu-list {
+    display: flex;
+    align-items: center;
+
+    &__item {
+      &:not(:first-child) {
+        margin-left: 32px;
+      }
+    }
+  }
+
+  &__search-icon {
+    margin-left: 40px;
+  }
+
+  &__burger {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__nav {
+    display: none;
+  }
+}
