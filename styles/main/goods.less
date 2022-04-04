@@ -1,0 +1,71 @@
+.goods {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  &__describe {
+
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 48px;
+    gap: 30px;
+  }
+
+  &__item-wrapper {
+
+  }
+
+  &__item {
+    background-color: var(--card-soft-color);
+  }
+
+  &__item-info {
+    padding: 25px 16px 20px;
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 13px;
+      line-height: 16px;
+      color: var(--black-color);
+    }
+
+    &__text {
+      margin-top: 12px;
+      font-weight: 300;
+      color: var(--black-light-color);
+    }
+
+    &__price {
+      margin-top: 18px;
+      font-size: 16px;
+      line-height: 19px;
+      color: var(--pink-color);
+    }
+  }
+
+  &__browse-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 48px 0 96px;
+
+    &__button {
+      padding: 14px 38px;
+      text-transform: capitalize;
+      border: 1px solid var(--pink-color);
+      color: var(--pink-color);
+      background-color: var(--card-color);
+
+      cursor: pointer;
+    }
+  }
+}
