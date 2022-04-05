@@ -23,7 +23,7 @@
         <div class="header__menu">
             <ul class="header__menu-list">
                 <li class="header__menu-list__item">
-                    <button class="header__burger">
+                    <button class="header__burger" id="burger">
                         <img class="header__burger__icon" src="./img/header/burger.svg" alt="burger">
                     </button>
                 </li>
@@ -38,40 +38,46 @@
                     </a>
                 </li>
             </ul>
-            <nav class="header__nav">
-                <h2 class="header__nav__title">menu</h2>
-                <ul class="header__nav__list">
-                    <li class="header__nav__item nav-item">
-                        <h3 class="nav-item__title">man</h3>
-                        <ul class="nav-item__sub-list sub-list">
-                            <li class="sub-list__item">Accessories</li>
-                            <li class="sub-list__item">Bags</li>
-                            <li class="sub-list__item">Denim</li>
-                            <li class="sub-list__item">T-Shirts</li>
-                        </ul>
-                    </li>
-                    <li class="header__nav__item nav-item">
-                        <h3 class="nav-item__title">woman</h3>
-                        <ul class="nav-item__sub-list sub-list">
-                            <li class="sub-list__item">Accessories</li>
-                            <li class="sub-list__item">Jackets & Coats</li>
-                            <li class="sub-list__item">Polos</li>
-                            <li class="sub-list__item">T-Shirts</li>
-                            <li class="sub-list__item">Shirts</li>
-                        </ul>
-                    </li>
-                    <li class="header__nav__item nav-item">
-                        <h3 class="nav-item__title">kids</h3>
-                        <ul class="nav-item__sub-list sub-list">
-                            <li class="sub-list__item">Accessories</li>
-                            <li class="sub-list__item">Jackets & Coats</li>
-                            <li class="sub-list__item">Polos</li>
-                            <li class="sub-list__item">T-Shirts</li>
-                            <li class="sub-list__item">Shirts</li>
-                            <li class="sub-list__item">Bags</li>
-                        </ul>
-                    </li>
-                </ul>
+            <nav class="header__nav" id="menu-wrapper">
+                <div class="header__nav__wrapper">
+                    <button class="header__nav__close" id="menu-close">
+                        <img class="header__nav__close__icon" src="./img/header/close.svg" alt="close menu">
+                    </button>
+                    <h2 class="header__nav__title">menu</h2>
+                    <ul class="header__nav__list">
+                        <li class="header__nav__item header__nav-item">
+                            <h3 class="header__nav-item__title">man</h3>
+                            <ul class="header__nav-item__sub-list header__sub-list">
+                                <li class="header__sub-list__item">Accessories</li>
+                                <li class="header__sub-list__item">Bags</li>
+                                <li class="header__sub-list__item">Denim</li>
+                                <li class="header__sub-list__item">T-Shirts</li>
+                            </ul>
+                        </li>
+                        <li class="header__nav__item header__nav-item">
+                            <h3 class="header__nav-item__title">woman</h3>
+                            <ul class="header__nav-item__sub-list header__sub-list">
+                                <li class="header__sub-list__item">Accessories</li>
+                                <li class="header__sub-list__item">Jackets & Coats</li>
+                                <li class="header__sub-list__item">Polos</li>
+                                <li class="header__sub-list__item">T-Shirts</li>
+                                <li class="header__sub-list__item">Shirts</li>
+                            </ul>
+                        </li>
+                        <li class="header__nav__item header__nav-item">
+                            <h3 class="header__nav-item__title">kids</h3>
+                            <ul class="header__nav-item__sub-list header__sub-list">
+                                <li class="header__sub-list__item">Accessories</li>
+                                <li class="header__sub-list__item">Jackets & Coats</li>
+                                <li class="header__sub-list__item">Polos</li>
+                                <li class="header__sub-list__item">T-Shirts</li>
+                                <li class="header__sub-list__item">Shirts</li>
+                                <li class="header__sub-list__item">Bags</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
             </nav>
         </div>
 
@@ -295,4 +301,18 @@
     </div>
 </footer>
 </body>
+
+<script>
+    let button = document.getElementById('burger');
+    let wrp = document.getElementById('menu-wrapper');
+    let close = document.getElementById('menu-close');
+
+    button.addEventListener('click', function(){
+        wrp.classList.toggle('display-block');
+    });
+    close.addEventListener('click', function(){
+        wrp.classList.remove('display-block');
+    });
+</script>
+
 </html>

@@ -1,3 +1,6 @@
+:root {
+  --banner-height: 764px;
+}
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -131,6 +134,7 @@ table {
   --body-color: #E1E1E1;
   --banner-color: #F1E4E6;
   --gray-color: #f2f2f2;
+  --sub-menu-color: #6F6E6E;
 }
 * {
   font-family: 'Lato', sans-serif;
@@ -143,27 +147,20 @@ h1 {
   font-weight: 700;
   line-height: 38px;
 }
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
 .container {
   width: 1140px;
   margin: 0 auto;
 }
+:root {
+  --header-height: 76px;
+  --nav-vertical-padding: 36px;
+}
 .header {
   background-color: var(--black-bkg);
-  min-height: 75px;
+  height: var(--header-height);
   display: flex;
   align-items: center;
+  position: relative;
 }
 .header__wrapper {
   display: flex;
@@ -191,9 +188,46 @@ h1 {
 .header__burger {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .header__nav {
   display: none;
+  position: absolute;
+  right: 0;
+  top: var(--header-height);
+  height: var(--banner-height);
+  width: 232px;
+  background-color: var(--card-color);
+  box-sizing: border-box;
+  padding: var(--nav-vertical-padding) 34px;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.header__nav__wrapper {
+  position: relative;
+}
+.header__nav__close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.header__nav__title {
+  text-transform: uppercase;
+}
+.header__nav-item {
+  margin-top: 24px;
+}
+.header__nav-item__title {
+  color: var(--pink-color);
+  text-transform: uppercase;
+}
+.header__sub-list__item {
+  margin-top: 12px;
+  margin-left: 24px;
+  color: var(--sub-menu-color);
 }
 .banner {
   display: flex;
@@ -214,7 +248,7 @@ h1 {
 }
 .banner__img-wrapper__img {
   width: 382px;
-  height: 765px;
+  height: var(--banner-height);
 }
 .banner__title-wrapper {
   display: flex;
@@ -401,6 +435,9 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+.subscribe__quote__img {
+  border-radius: 50%;
+}
 .subscribe__quote__block {
   margin-top: 30px;
   width: 360px;
@@ -489,5 +526,20 @@ h1 {
 }
 .social__item:not(:first-child) {
   margin-left: 8px;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.display-block {
+  display: block;
 }
 /*# sourceMappingURL=index.css.map */
