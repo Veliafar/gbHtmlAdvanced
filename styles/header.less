@@ -49,6 +49,14 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+  }
+
+  &__link {
+    fill: var(--menu-icon);
+    &:hover {
+      fill: var(--card-color);
+    }
   }
 
   &__nav {
@@ -79,6 +87,17 @@
       padding: 0;
 
       cursor: pointer;
+
+
+      &__icon {
+
+        fill: var(--sub-menu-color);
+        //filter: invert(44%) sepia(17%) saturate(0%) hue-rotate(191deg) brightness(93%) contrast(86%);
+        &:hover {
+          fill: var(--pink-color);
+          //filter: invert(66%) sepia(70%) saturate(3682%) hue-rotate(313deg) brightness(103%) contrast(89%);
+        }
+      }
     }
 
     &__title {
@@ -100,6 +119,12 @@
       margin-top: 12px;
       margin-left: 24px;
       color: var(--sub-menu-color);
+
+
+      &:hover {
+        cursor: pointer;
+        color: var(--pink-color);
+      }
     }
   }
 }

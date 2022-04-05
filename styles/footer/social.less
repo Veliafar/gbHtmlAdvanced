@@ -36,11 +36,18 @@
     &:not(:first-child) {
       margin-left: 8px;
     }
-    &__link {
 
+    cursor: pointer;
+
+    fill: var(--black-color);
+    &:hover {
+      background-color: var(--pink-color);
+      fill: var(--card-color);
+    }
+
+    &__link {
     }
     &__img {
-
     }
   }
 }
