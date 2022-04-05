@@ -129,6 +129,8 @@ table {
   --black-color: #000;
   --black-light-color: #5D5D5D;
   --body-color: #E1E1E1;
+  --banner-color: #F1E4E6;
+  --gray-color: #f2f2f2;
 }
 * {
   font-family: 'Lato', sans-serif;
@@ -195,19 +197,38 @@ h1 {
 }
 .banner {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: var(--banner-color);
 }
-.banner__img {
-  width: 800px;
+.banner__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner__img-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+.banner__img-wrapper__img {
+  width: 382px;
   height: 765px;
 }
 .banner__title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
   padding-left: 64px;
 }
 .banner__text {
-  width: 300px;
+  width: 386px;
   padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .banner__text__begin {
   font-size: 48px;
@@ -215,8 +236,23 @@ h1 {
   line-height: 57px;
   text-transform: uppercase;
 }
+.banner__text__second {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
 .banner__text__end {
+  margin-left: 12px;
   color: var(--pink-color);
+}
+.banner__text:before {
+  position: absolute;
+  content: '';
+  left: -12px;
+  top: -2px;
+  width: 12px;
+  height: 92px;
+  background-color: var(--pink-color);
 }
 .sales {
   padding: 65px 0 96px 0;
@@ -346,6 +382,10 @@ h1 {
 }
 .subscribe {
   height: 448px;
+  background-image: url("../../img/subscribe/subscribe.jpg");
+  background-color: var(--gray-color);
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
