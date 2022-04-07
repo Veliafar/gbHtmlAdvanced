@@ -16,7 +16,9 @@ footerTemplate.innerHTML = `
                 <h3 class="subscribe__form__title" >subscribe</h3>
                 <p class="subscribe__form__text">for our newsletter and promotion</p>
                 <div class="subscribe__form__input-block subscribe__input-block">
-                    <input class="subscribe__input-block__input"  placeholder="enter your email" type="text" size="40">
+                    <label>
+                        <input class="subscribe__input-block__input"  placeholder="enter your email" type="text" size="40">
+                    </label>
                     <button class="subscribe__input-block__button" type="submit">
                         Subscribe
                     </button>

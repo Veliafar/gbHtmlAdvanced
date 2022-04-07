@@ -539,14 +539,19 @@ h1 {
   border: none;
   background-color: var(--body-color);
   width: 256px;
-  height: 33px;
+  height: 49px;
   padding: 8px 22px;
+  box-sizing: border-box;
   border-radius: 16px 0 0 16px;
 }
 .subscribe__input-block__input::placeholder {
   text-transform: capitalize;
   font-size: 14px;
   line-height: 17px;
+}
+.subscribe__input-block__input:focus-visible {
+  outline: 0;
+  border: 1px solid var(--pink-color);
 }
 .subscribe__input-block__button {
   width: 100px;
