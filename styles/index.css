@@ -721,22 +721,22 @@ h1 {
 .benefits__list__item:before {
   position: absolute;
   content: '';
-  top: 11px;
-  left: 0px;
+  top: 12px;
+  left: 6px;
   width: 1px;
   height: 12px;
   border-left: 2px solid var(--black-color);
-  transform: rotate(144deg);
+  transform: rotate(135deg);
 }
 .benefits__list__item:after {
   position: absolute;
   content: '';
   top: 1px;
-  left: 12px;
+  left: 19px;
   width: 1px;
   height: 24px;
   border-left: 2px solid var(--black-color);
-  transform: rotate(40deg);
+  transform: rotate(45deg);
 }
 .radio-button[type="radio"]:checked,
 .radio-button[type="radio"]:not(:checked) {
