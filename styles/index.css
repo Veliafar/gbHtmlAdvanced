@@ -606,20 +606,6 @@ h1 {
 :root {
   --reg-margin-top: 64px;
 }
-.registration__header {
-  background-color: var(--reg-header-color);
-  height: 148px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.registration__header__wrapper__text {
-  font-size: 24px;
-  line-height: 29px;
-  font-weight: 400;
-  color: var(--pink-color);
-  text-transform: uppercase;
-}
 .registration__data {
   margin-top: var(--reg-margin-top);
   height: 675px;
@@ -732,6 +718,25 @@ h1 {
   height: 24px;
   border-left: 2px solid var(--black-color);
   transform: rotate(40deg);
+}
+.inner-page__header {
+  background-color: var(--reg-header-color);
+  height: 148px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.inner-page__header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inner-page__header__wrapper__text {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: var(--pink-color);
+  text-transform: uppercase;
 }
 .radio-button[type="radio"]:checked,
 .radio-button[type="radio"]:not(:checked) {
