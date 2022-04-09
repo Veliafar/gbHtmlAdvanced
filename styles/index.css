@@ -719,19 +719,19 @@ h1 {
   border-left: 2px solid var(--black-color);
   transform: rotate(40deg);
 }
-.inner-page__header {
+.inner-page-header {
   background-color: var(--reg-header-color);
   height: 148px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.inner-page__header__wrapper {
+.inner-page-header__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.inner-page__header__wrapper__text {
+.inner-page-header__wrapper__text {
   font-size: 24px;
   line-height: 29px;
   font-weight: 400;
